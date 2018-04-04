@@ -1,7 +1,7 @@
 # UnityIAPDemo
 Unity接入AppStore内购Demo ，服务器验证为自己模拟
 ### 流程图
-```flow 
+``` flow 
 st=>start: productId
 suc=>end
 fail=>end: failed
@@ -13,6 +13,7 @@ transactionState=>condition: TransactionState
 AssertReveiptWithServer=>condition: AssertReveiptWithServer
 RemoveFinishTransaction=>operation: RemoveFinishTransaction
 Success=>operation: Success
+
 st->productData->productValid
 productValid(yes)->addToSkPayMent->updateTransactions->transactionState
 productValid(no)->fail
